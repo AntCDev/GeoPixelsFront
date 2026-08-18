@@ -1,0 +1,28 @@
+# 1. Ignore everything across the entire repository
+*
+
+# 2. Allow Git to enter the wwwroot folder
+!/wwwroot/
+
+# 3. Ignore all files and folders directly inside wwwroot by default
+/wwwroot/*
+
+# 4. Whitelist specific files in wwwroot
+!/wwwroot/index.html
+!/wwwroot/nuances.html
+!/wwwroot/robots.txt
+!/wwwroot/TOS.html
+!/wwwroot/PrivacyPolicy.txt
+
+# 5. Whitelist specific subdirectories and all their contents
+!/wwwroot/js/
+!/wwwroot/js/**
+!/wwwroot/css/
+!/wwwroot/css/**
+!/wwwroot/mp3/
+!/wwwroot/mp3/**
+!/wwwroot/img/
+!/wwwroot/img/**
+
+# 6. Ensure .gitignore itself isn't ignored so Git remembers these rules
+!.gitignore

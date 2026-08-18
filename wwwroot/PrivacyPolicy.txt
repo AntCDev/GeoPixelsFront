@@ -1,0 +1,103 @@
+Privacy Policy
+
+Last updated: August 22, 2025
+
+Controller: GeoPixels
+Contact: geopixels@geopixels.net
+
+This Privacy Policy explains how we collect, use, disclose, and protect personal information when you use the Pixel Map web application (the "App"). The App is hosted in Mexico and operated by Marco Antonio Garcia Rojas. By using the App you agree to the collection and use of information in accordance with this policy.
+
+1. What information we collect
+
+We collect and store the minimum information necessary to operate the App and provide the user experience.
+
+Account identifier
+
+ When you sign in with Google we store only your Google subject identifier (a unique, non-human-readable string associated with your Google account). We do not collect your Google account email, name, or other profile fields unless you explicitly provide them.
+
+User-created content and game data
+
+ Pixels you place on the map (position, color, timestamp, and the associated account identifier).
+ Game state data tied to your account, such as energy level, purchased colors or items, inventory and temporary gameplay order (e.g., order of color picks).
+
+Cookies and local storage
+
+We use a single cookie/local-storage entry to store your Google subject identifier (the account ID) to keep you logged in and avoid repeated sign-ins. We may also use session/local storage for temporary game state (for example, the order of recent color picks) to improve immediate gameplay responsiveness.
+
+What we do NOT collect
+ We do not collect or store IP addresses, browser fingerprints, search history, or other telemetry data.
+ We do not collect any additional personally identifiable information (PII) unless you explicitly provide it.
+
+2. How we use the information
+
+We use the information we store for the following purposes:
+
+ To authenticate and identify you within the App using the Google subject identifier.
+ To save and display the pixels you place and reconstruct your contributions to the shared canvas.
+ To maintain your game state (energy level, purchases, inventory) and enable the in‑App experience.
+ To process and record purchases (note: payment processing is performed by a third party — see Section 4).
+ To detect misuse, enforce our Terms of Service, and maintain the integrity of the App.
+
+We do not use your data for targeted advertising or profiling.
+
+3. Legal basis for processing
+
+If you are located in jurisdictions that require a lawful basis for processing (for example, the European Union), our legal bases are:
+
+Performance of a contract: to provide the App and features you request (e.g., saving pixels, maintaining game state).
+Legitimate interests: to operate, secure, and improve the App and to prevent abuse.
+
+Where required by law, we will ask for explicit consent for uses that fall outside these bases.
+
+
+ 4. Third-party services
+
+Google (Sign-In / OAuth)
+We use Google Sign-In only to authenticate users. We receive only the Google subject identifier and do not request additional profile fields.
+
+Stripe (Payments)
+All payments and purchases are processed by Stripe. We do not receive or store your payment card or banking information. For payment-related questions please contact Stripe or consult Stripe's privacy page.
+
+Cloudflare
+We use Cloudflare for DNS and tunnel routing. Cloudflare may process some network metadata as part of providing these services; however, we do not collect or retain IP addresses ourselves, and Cloudflare’s privacy practices apply to that processing.
+
+Other third-party services that you choose to use (for example, social links or analytics if you enable them) will be listed and described here if/when they are present. Currently, no analytics or advertising providers are used.
+
+5. Sharing and sale of data
+
+We do not sell your personal data or user content. We will not share, rent, or trade your personal information with third parties except as described in this policy or when required by law (for example, to comply with a valid subpoena, court order, or other legal process).
+
+We may share limited information with service providers who perform services on our behalf (for example, Cloudflare or Stripe), and those providers are bound by contract to keep the information confidential and use it only to provide the contracted services.
+
+6. Data retention
+
+We retain the account identifier and the pixels and game-state data you generate for as long as your account exists or as long as necessary to provide the App. If you request deletion of your account we will remove your account identifier and associated user data from our active systems. Backups or archived copies may retain data for a limited additional period necessary for disaster recovery; we will delete such data according to our backup retention policies.
+
+7. Your rights and choices
+
+Depending on your jurisdiction you may have rights to access, correct, export, restrict, or delete the personal information we hold about you. To exercise these rights, contact us at geopixels@geopixels.net . We will respond to verifiable requests consistent with applicable law.
+
+If you want your account and related data removed, please contact us and we will delete your Google subject identifier and associated pixels/game data from our systems.
+
+8. Security
+
+We implement reasonable administrative, technical, and physical measures designed to protect the information we store. However, no security system is impenetrable. We cannot guarantee absolute security of your data. If there is a security incident affecting your data we will notify you and any applicable authorities as required by law.
+
+9. International transfers and hosting
+
+The App and its servers are hosted in Mexico. Data processed by third parties (for example Stripe or Cloudflare) may be processed or accessible in other countries. By using the App you consent to transfer of your information to the countries where our servers and service providers operate.
+
+10. Children
+
+The App is intended for users aged 18 and older. We do not knowingly collect personal information from children under 18. If you believe we have collected data from a child, please contact us and we will promptly delete the information.
+
+11. Changes to this policy
+
+We may update this Privacy Policy from time to time. When we do we will update the "Last updated" date at the top of this page. Material changes will be posted in the App or otherwise communicated to users.
+
+12. Contact
+
+If you have questions, requests, or concerns about this Privacy Policy, please contact:
+
+Email: geopixels@geopixels.net
+
