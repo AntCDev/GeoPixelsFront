@@ -13,6 +13,8 @@
 !/wwwroot/robots.txt
 !/wwwroot/TOS.html
 !/wwwroot/PrivacyPolicy.txt
+!/wwwroot/README.md
+!/wwwroot/LICENSE
 
 # 5. Whitelist specific subdirectories and all their contents
 !/wwwroot/js/
