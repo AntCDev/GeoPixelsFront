@@ -4,7 +4,7 @@
 
 This repository contains the `wwwroot` frontend for [GeoPixels](https://geopixels.net) — a collaborative, real-time pixel art canvas painted on the world map.
 
-The frontend has always been fully open in the browser (no obfuscation, no minification tricks to hide behind), so this repo just formalizes that: the code is public, MIT-licensed, and open to contributions.
+The frontend has always been fully open in the browser, so this repo just formalizes that: the code is public, MIT-licensed, and open to contributions.
 
 ## Live vs. Dev
 
@@ -19,16 +19,16 @@ Feel free to fork, poke around, or build extensions on top of the frontend. If y
 
 1. Fork the repo and make your changes.
 2. Open a pull request against this repo.
-3. **Review timeline:** PRs are reviewed on a best-effort basis and may take **1–2 weeks** (sometimes longer) to be looked at, since this is maintained part-time.
+3. **Review timeline:** PRs are reviewed on may take a few days to be looked at.
 4. Once approved and merged, changes are first deployed to [dev.geopixels.net](https://dev.geopixels.net) for testing, then pushed to production a few days later.
 
-This repo only covers the frontend — there's no need to re-explain what GeoPixels is or how it works if you're opening a PR; familiarity with the app is assumed.
+This repo only covers the frontend
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE) — you're free to use, modify, and redistribute this code, including commercially, as long as the original copyright and license notice are kept.
 
-Note that this covers the **code only**. It does not grant any rights to GeoPixels' branding, or to user-submitted pixel art on the live canvas, which remains subject to the [GeoPixels Terms of Service](https://geopixels.net).
+Note that this covers the **code only**. It does not grant any rights to GeoPixels' branding, or to user-submitted pixel art on the live canvas, which remains subject to the [GeoPixels Terms of Service](https://geopixels.net/TOS.html).
 
 ## Contact
 
