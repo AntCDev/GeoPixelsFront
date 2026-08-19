@@ -3505,7 +3505,7 @@ function ensureMergeWorker() {
     if (!mergeWorker) {
         console.log("Initializing merge-worker...");
         try {
-            mergeWorker = new Worker('/js/merge-worker4.js'); // Assuming this is the correct path
+            mergeWorker = new Worker('/js/merge-worker.js'); // Assuming this is the correct path
 
             // Handle messages from the merge worker
             mergeWorker.onmessage = (ev) => {
