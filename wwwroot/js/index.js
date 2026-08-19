@@ -3480,7 +3480,7 @@ function mulberry32(seed) {
 function ensureSyncWorker() {
     if (syncWorker) return;
     try {
-        syncWorker = new Worker('/js/sync-worker39.js');
+        syncWorker = new Worker('/js/sync-worker.js');
 
         syncWorker.addEventListener('error', (e) =>
             console.error('syncWorker error', e)
