@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy — GeoPixels</title>
+    <meta name="description" content="How GeoPixels collects, uses, and protects your personal information, including data received from Google Sign-In.">
+    <style>
+        :root {
+            --ink: #1f2328;
+            --muted: #5a6470;
+            --rule: #dfe3e8;
+            --link: #1a56b8;
+            --paper: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 3rem 1.25rem 6rem;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        main {
+            max-width: 44rem;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            line-height: 1.2;
+            margin: 0 0 .35rem;
+            letter-spacing: -.01em;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            margin: 2.75rem 0 .75rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin: 1.5rem 0 .4rem;
+        }
+
+        p, li {
+            margin: 0 0 .85rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        a {
+            color: var(--link);
+        }
+
+            a:focus-visible {
+                outline: 2px solid var(--link);
+                outline-offset: 2px;
+            }
+
+        .meta {
+            color: var(--muted);
+            font-size: .9rem;
+            margin-bottom: 2rem;
+        }
+
+            .meta p {
+                margin: 0 0 .2rem;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: .93rem;
+        }
+
+        th, td {
+            text-align: left;
+            vertical-align: top;
+            padding: .6rem .7rem;
+            border: 1px solid var(--rule);
+        }
+
+        th {
+            background: #f5f7f9;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 3.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--rule);
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        @media (max-width: 34rem) {
+            body {
+                padding: 2rem 1rem 4rem;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead {
+                display: none;
+            }
+
+            td {
+                border-top: none;
+            }
+
+            tr {
+                margin-bottom: 1rem;
+                border-top: 1px solid var(--rule);
+            }
+
+            td::before {
+                content: attr(data-label);
+                display: block;
+                font-weight: 600;
+                margin-bottom: .15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <h1>GeoPixels Privacy Policy</h1>
+        <div class="meta">
+            <p><strong>Last updated:</strong> September 2, 2026</p>
+            <p><strong>Controller:</strong> GeoPixels, operated by Marco Antonio Garcia Rojas (Mexico)</p>
+            <p><strong>Contact:</strong> <a href="mailto:geopixels@geopixels.net">geopixels@geopixels.net</a></p>
+        </div>
+
+        <p>GeoPixels is a collaborative pixel-art canvas laid over a map of the world. Anyone can explore the canvas without an account. To place pixels, you sign in with Google.</p>
+
+        <p>This policy explains what personal information GeoPixels collects, why it is collected, how long it is kept, and what you can do about it. It applies to the GeoPixels web application at <a href="https://www.geopixels.net">geopixels.net</a> (the "App"). GeoPixels is intended only for adults aged 18 and over.</p>
+
+        <p>GeoPixels shows no advertising, runs no analytics or tracking services, and does not sell or share personal information for advertising or profiling.</p>
+
+        <h2 id="google-user-data">1. Data received from Google Sign-In</h2>
+
+        <p>GeoPixels uses Google Sign-In as its only account system. When you sign in, Google asks you to approve the scopes listed below, and GeoPixels receives only the data those scopes cover.</p>
+
+        <!-- TODO: Confirm these rows against the scopes actually listed on your OAuth consent
+             screen in the Google Cloud Console, and delete any you do not request. This table
+             is what the reviewer compares against your consent screen configuration. -->
+        <table>
+            <thead>
+                <tr><th>Scope</th><th>What we receive</th><th>Why we need it</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Scope"><code>openid</code></td>
+                    <td data-label="What we receive">Your Google subject identifier — a unique, non-human-readable string that identifies your Google account.</td>
+                    <td data-label="Why we need it">This is your GeoPixels account ID. Every pixel you place, your energy, colors, upgrades and purchases are tied to it.</td>
+                </tr>
+                <tr>
+                    <td data-label="Scope"><code>email</code></td>
+                    <td data-label="What we receive">Your Google account email address.</td>
+                    <td data-label="Why we need it">To confirm your identity when you contact us about account recovery, an account transfer, or a support issue. On rare occasions a Google subject identifier has changed or stopped matching an existing account, and without a second identifier we cannot verify that the person asking is the account holder.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>We do not request your Google contacts, calendar, Drive files, or any other Google service data, and we have no access to them.</p>
+
+        <p>GeoPixels' use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including its Limited Use requirements. We do not transfer Google user data to third parties except as described in Section 5, do not use it for advertising, and do not allow humans to read it except with your consent, for security or abuse investigations, to comply with applicable law, or where the data has been aggregated and anonymized.</p>
+
+        <h2>2. Other information we collect</h2>
+
+        <h3>IP address</h3>
+        <p>We record the IP address used when an account is created, and when you sign in. This is used to enforce our one-account-per-person rule, to investigate ban evasion and abuse of the canvas, and to protect the service from automated activity. IP records are kept for as long as your account exists and are removed when you delete it (see Section 7). They are not used to build a profile of you, are not linked to advertising, and are not shared except as described in Section 5.</p>
+
+        <h3>Content and game data</h3>
+        <ul>
+            <li>Pixels you place: position, color, timestamp, and your account identifier. Pixel authorship is visible to other users in the App — clicking a pixel shows who placed it.</li>
+            <li>Game state: energy, level, purchased colors and upgrades, inventory, palette configuration, and favorites.</li>
+            <li>Social links and profile details you choose to add. Anything you put in your profile is public.</li>
+            <li>Reports you submit and moderation records relating to your account.</li>
+        </ul>
+
+        <h3>Cookies and local storage</h3>
+        <p>We store your account identifier in a cookie or local storage entry so that you stay signed in between visits. We also use session and local storage for temporary gameplay state, such as your recent color picks. We do not use advertising, analytics, or cross-site tracking cookies.</p>
+
+        <h3>Payments</h3>
+        <!-- TODO: confirm against your Inqud webhook payload that you genuinely receive nothing
+             beyond user ID, amount and status. If the payload also contains a wallet address,
+             network, or transaction hash, that has to be disclosed here. -->
+        <p>Purchases are handled by <a href="https://inqud.com" target="_blank" rel="noopener">Inqud</a>, our payment provider. When you buy Pixels, the only thing GeoPixels sends Inqud is your GeoPixels user ID and the amount. You then complete the payment on Inqud's own checkout page, choosing a network and token and transferring the amount from your own wallet. No account registration or identity verification is required of you to pay.</p>
+        <p>Inqud notifies us of the result, identifying the payment by the same user ID. We do not receive your wallet address, transaction details, or anything else you enter on Inqud's checkout page. Any information Inqud collects during checkout is handled under Inqud's own privacy policy, not this one. On our side we keep a record that a purchase occurred, its amount, and what it granted your account.</p>
+
+        <h2>3. How we use your information</h2>
+        <ul>
+            <li>To create your account, sign you in, and keep you signed in.</li>
+            <li>To save the pixels you place and display them on the shared canvas.</li>
+            <li>To maintain your game state, purchases, and profile.</li>
+            <li>To verify your identity when you contact us about your account.</li>
+            <li>To enforce our rules and Terms of Service, investigate reports, and prevent abuse, ban evasion, and multi-accounting.</li>
+            <li>To keep the service secure and available.</li>
+        </ul>
+        <p>We do not use your information for targeted advertising, ad measurement, profiling, or credit or eligibility decisions.</p>
+
+        <h2>4. Legal basis for processing</h2>
+        <p>Where a lawful basis is required (for example, under the EU or UK GDPR):</p>
+        <ul>
+            <li><strong>Performance of a contract</strong> — creating and maintaining your account, saving your pixels and game state, and processing purchases.</li>
+            <li><strong>Legitimate interests</strong> — securing the service, verifying account ownership in support requests, enforcing our rules, and preventing abuse and multi-accounting.</li>
+            <li><strong>Legal obligation</strong> — retaining records or responding where the law requires it.</li>
+        </ul>
+        <p>Where a use falls outside these bases, we will ask for your consent.</p>
+
+        <h2>5. Who we share information with</h2>
+        <p>We do not sell your personal information, and we do not share it for advertising or profiling. We share limited information with the service providers we rely on to run the App:</p>
+        <ul>
+            <li><strong>Google</strong> — authentication (Google Sign-In).</li>
+            <li><strong>Inqud</strong> — payment processing. We send them only your GeoPixels user ID and the purchase amount.</li>
+            <li><strong>Cloudflare</strong> — DNS and network routing. Cloudflare processes network metadata, including IP addresses, as part of delivering traffic to us.</li>
+        </ul>
+        <p>These providers are permitted to use the information only to provide their service to us. We may also disclose information where we are legally required to, such as in response to a valid court order or lawful request, or where necessary to investigate a serious security incident or protect the rights and safety of our users.</p>
+
+        <h2>6. How long we keep it</h2>
+        <table>
+            <thead>
+                <tr><th>Data</th><th>Retention</th></tr>
+            </thead>
+            <tbody>
+                <tr><td data-label="Data">Google subject identifier</td><td data-label="Retention">For as long as your account exists. Erased on deletion.</td></tr>
+                <tr><td data-label="Data">Email address</td><td data-label="Retention">For as long as your account exists. Erased on deletion.</td></tr>
+                <tr><td data-label="Data">IP records</td><td data-label="Retention">For as long as your account exists. Erased on deletion.</td></tr>
+                <tr><td data-label="Data">Profile details and social links</td><td data-label="Retention">For as long as your account exists. Erased on deletion.</td></tr>
+                <tr><td data-label="Data">Game state (energy, colors, upgrades, inventory)</td><td data-label="Retention">Kept against your account number, which remains after deletion but is no longer linked to any identifying information.</td></tr>
+                <tr><td data-label="Data">Pixels placed on the canvas</td><td data-label="Retention">Pixels form part of a shared, collaborative canvas and stay on it after deletion. They are reassigned to an anonymous placeholder account and no longer attributed to you.</td></tr>
+                <tr><td data-label="Data">Purchase records</td><td data-label="Retention">Retained for financial and tax recordkeeping, referenced by account number only after deletion.</td></tr>
+                <tr><td data-label="Data">Moderation and ban records</td><td data-label="Retention">Retained where needed to enforce bans and maintain canvas integrity.</td></tr>
+            </tbody>
+        </table>
+        <p>Backups may hold copies for a limited further period before being overwritten in the normal backup cycle.</p>
+
+        <h2>7. Your rights and how to delete your account</h2>
+        <p>Depending on where you live, you may have the right to access, correct, export, restrict, object to the processing of, or delete the personal information we hold about you. You can exercise any of these by emailing <a href="mailto:geopixels@geopixels.net">geopixels@geopixels.net</a> from the address associated with your account.</p>
+        <p><strong>To delete your account</strong>, email <a href="mailto:geopixels@geopixels.net">geopixels@geopixels.net</a> with the subject line "Account deletion". When we process a deletion request we erase every piece of information that identifies you:</p>
+        <ul>
+            <li>Your Google subject identifier, email address, IP records, and profile details, including any social links, are erased from our database.</li>
+            <li>Your display name is replaced with "DELETED USER". Pixels you placed stay on the canvas and stay attached to the same internal account record, so the canvas stays intact, but clicking one shows only "DELETED USER" — there is nothing left on the account that identifies you.</li>
+            <li>Your internal account number and the records attached to it, such as purchase history, remain in the database, but with the identifying fields erased there is no longer any way to connect them back to you or to your Google account.</li>
+        </ul>
+        <p>This is irreversible. Once the identifying fields are erased we cannot restore your account or reconnect you to it, so if you later sign in with the same Google account you will be starting fresh.</p>
+        <p>You can also revoke GeoPixels' access to your Google account at any time from your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account permissions page</a>. Doing so prevents future sign-ins but does not by itself delete the data we already hold — email us to request deletion.</p>
+        <p>If you are in the EEA or UK, you may also lodge a complaint with your local data protection authority.</p>
+
+        <h2>8. Security</h2>
+        <p>We use reasonable administrative, technical, and physical measures to protect the information we hold. No system is completely secure, and we cannot guarantee absolute security. If a security incident affects your personal information, we will notify you and the relevant authorities where the law requires it.</p>
+
+        <h2>9. Hosting and international transfers</h2>
+        <p>The App and its servers are hosted in Mexico. Our service providers — Google, Inqud, and Cloudflare — may process data in other countries, including the United States and the European Union. Where information is transferred out of the EEA or UK, we rely on our providers' own transfer safeguards, such as standard contractual clauses.</p>
+
+        <h2>10. Children</h2>
+        <p>GeoPixels is intended only for people aged 18 and over, and we do not knowingly collect personal information from anyone under 18. If you believe a minor has created an account, contact us at <a href="mailto:geopixels@geopixels.net">geopixels@geopixels.net</a> and we will delete it and the associated information.</p>
+
+        <h2>11. Changes to this policy</h2>
+        <p>We may update this policy. When we do, we will change the "Last updated" date above, and we will announce material changes in the App.</p>
+        <p><strong>September 2, 2026:</strong> This policy was rewritten for accuracy. The previous version stated that we did not collect your email address or IP address. That was not correct: we receive your email address through Google Sign-In and record your IP address for abuse prevention. Sections 1 and 2 now describe both, along with why they are needed and how long they are kept. No new collection was introduced by this update.</p>
+
+        <h2>12. Contact</h2>
+        <p>Questions, requests, or concerns about this policy: <a href="mailto:geopixels@geopixels.net">geopixels@geopixels.net</a></p>
+
+        <footer>
+            <p><a href="https://www.geopixels.net">GeoPixels</a> &middot; <a href="/terms">Terms of Service</a></p>
+        </footer>
+
+    </main>
+</body>
+</html>
