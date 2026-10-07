@@ -289,7 +289,25 @@ function toggleProfile(forceOpen = false) {
     document.getElementById("userID").value = `${userData["name"]}#${userData["id"]}`;
     document.getElementById("userX").value = `${userData["xUser"]}`;
     document.getElementById("userReddit").value = `${userData["redditUser"]}`;
-    document.getElementById("userDiscord").value = `${userData["discordUser"]}`;
+
+
+
+    const discordStatus = document.getElementById("discordLinkStatus");
+    const discordBtn = document.getElementById("discordLinkButton");
+
+    if (userData["discordUser"]) {
+        discordStatus.textContent = userData["discordUser"];
+        discordStatus.classList.remove("text-gray-400");
+        discordBtn.title = "Re-link Discord";
+        discordBtn.setAttribute("aria-label", "Re-link Discord");
+    } else {
+        discordStatus.textContent = "Discord not linked";
+        discordStatus.classList.add("text-gray-400");
+        discordBtn.title = "Link Discord";
+        discordBtn.setAttribute("aria-label", "Link Discord");
+    }
+
+
     document.getElementById("pixelBalance").innerHTML = `${Math.floor(userData["pixels"] / 5)}`;
 
     // Update Upgrade Cards

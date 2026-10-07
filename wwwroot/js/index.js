@@ -1827,13 +1827,80 @@ async function fetchUserData() {
         return null;
     }
 }
+function renderDiscordLink() {
+    const status = document.getElementById("discordLinkStatus");
+    const btn = document.getElementById("discordLinkButton");
+    const linked = userData && userData.discordLinked;      // <- adjust
+    const name = userData && userData.discordUser;           // <- adjust
+
+    if (linked) {
+        status.textContent = name || "Discord linked";
+        status.className = "text-gray-800 truncate";
+        status.title = "Linked Discord account";
+        btn.textContent = "Change";
+        btn.title = "To link a different account, log into it on discord.com first";
+    } else {
+        status.textContent = "Discord not linked";
+        status.className = "text-gray-400 truncate";
+        status.title = "";
+        btn.textContent = "Link Discord";
+        btn.title = "";
+    }
+}
+
+async function startDiscordLink() {
+    const btn = document.getElementById("discordLinkButton");
+    btn.disabled = true;
+    try {
+        const res = await fetch(url + "/discord/link/start", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ Token: tokenUser, UserId: userID })
+        });
+        if (!res.ok) {
+            alert(await res.text());
+            return;
+        }
+        const data = await res.json();
+        window.location.href = data.url;   // off to Discord, comes back to /?discord=...
+    } catch (e) {
+        console.error(e);
+        alert("Couldn't reach the server. Try again in a moment.");
+    } finally {
+        btn.disabled = false;
+    }
+}
+
+// Shows the result after Discord sends the user back, then cleans the URL.
+// Swap alert() for your own toast/notification if you have one.
+function handleDiscordLinkResult() {
+    const params = new URLSearchParams(window.location.search);
+    const result = params.get("discord");
+    if (!result) return;
+
+    const messages = {
+        linked: "Discord linked. If you're in the Discord server you now have the verified role; otherwise press Verify in the server after joining.",
+        taken: "That Discord account is already linked to another GeoPixels account.",
+        expired: "The link request expired. Open your profile and press Link Discord again.",
+        cancelled: "Discord linking was cancelled.",
+        error: "Discord linking failed. Try again in a moment."
+    };
+    showAlert("Done", messages[result] || messages.error);
+
+    params.delete("discord");
+    const query = params.toString();
+    history.replaceState(null, "", window.location.pathname + (query ? "?" + query : "") + window.location.hash);
+}
+
+document.addEventListener("DOMContentLoaded", handleDiscordLinkResult);
+
+
 async function saveUserSocials() {
     UserName = document.getElementById("userID").value
     UserX = document.getElementById("userX").value
     UserReddit = document.getElementById("userReddit").value
-    UserDiscord = document.getElementById("userDiscord").value
 
-    var ToSend = JSON.stringify({ Token: tokenUser, Subject: subject, UserId: userID, UserName, UserX, UserReddit, UserDiscord })
+    var ToSend = JSON.stringify({ Token: tokenUser, Subject: subject, UserId: userID, UserName, UserX, UserReddit })
     const res = await fetch(url + "/UpdateUsers", {
         method: "POST",
         headers: {
