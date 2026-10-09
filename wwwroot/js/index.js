@@ -1900,7 +1900,7 @@ async function saveUserSocials() {
     UserX = document.getElementById("userX").value
     UserReddit = document.getElementById("userReddit").value
 
-    var ToSend = JSON.stringify({ Token: tokenUser, Subject: subject, UserId: userID, UserName, UserX, UserReddit })
+    var ToSend = JSON.stringify({ Token: tokenUser, Subject: subject, UserId: userID, UserName, UserX, UserReddit, DiscordVisible: discordVisible })
     const res = await fetch(url + "/UpdateUsers", {
         method: "POST",
         headers: {
@@ -2557,6 +2557,7 @@ async function logIn(data) {
     tokenUser = data.token;
     userID = data.id;
     userData = data;
+    console.log(data);
 
     // 2. Persist session credentials
     localStorage.setItem('tokenUser', tokenUser);

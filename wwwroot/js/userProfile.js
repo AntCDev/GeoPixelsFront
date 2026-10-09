@@ -307,6 +307,9 @@ function toggleProfile(forceOpen = false) {
         discordBtn.setAttribute("aria-label", "Link Discord");
     }
 
+    discordVisible = userData["discordVisible"] ?? true;
+    renderDiscordVisibility(!!userData["discordUser"]);
+
 
     document.getElementById("pixelBalance").innerHTML = `${Math.floor(userData["pixels"] / 5)}`;
 
@@ -331,6 +334,30 @@ function toggleProfile(forceOpen = false) {
         changeColor(Colors[activeColors[0]])
     }
 }
+
+function renderDiscordVisibility(isLinked) {
+    const btn = document.getElementById("discordVisibilityButton");
+    btn.classList.toggle("hidden", !isLinked);
+    btn.classList.toggle("flex", isLinked);
+
+    document.getElementById("discordEyeOpen").classList.toggle("hidden", !discordVisible);
+    document.getElementById("discordEyeClosed").classList.toggle("hidden", discordVisible);
+
+    btn.classList.toggle("text-[#5865F2]", discordVisible);
+    btn.classList.toggle("text-gray-400", !discordVisible);
+
+    const label = discordVisible ? "Discord visible to others" : "Discord hidden from others";
+    btn.title = label;
+    btn.setAttribute("aria-label", label);
+    btn.setAttribute("aria-pressed", String(discordVisible));
+}
+
+function toggleDiscordVisibility() {
+    discordVisible = !discordVisible;
+    renderDiscordVisibility(true);
+}
+
+
 function updateUpgradeCard(type, currentLevel, isBanner) {
     const textEl = document.getElementById(`${type}Text`);
     const btnEl = document.getElementById(`${type}Btn`);

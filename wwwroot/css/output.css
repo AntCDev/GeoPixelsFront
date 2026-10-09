@@ -28,7 +28,6 @@
     --color-yellow-50: oklch(98.7% 0.026 102.212);
     --color-yellow-100: oklch(97.3% 0.071 103.193);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
-    --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
@@ -125,7 +124,6 @@
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-spin: spin 1s linear infinite;
-    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --blur-sm: 8px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1665,6 +1663,9 @@
   }
   .whitespace-pre-wrap {
     white-space: pre-wrap;
+  }
+  .text-\[\#5865F2\] {
+    color: #5865F2;
   }
   .text-black {
     color: var(--color-black);
@@ -3226,11 +3227,6 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
   }
 }
 @layer properties {
