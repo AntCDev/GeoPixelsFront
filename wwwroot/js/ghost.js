@@ -379,13 +379,25 @@ function filterGhostByUserPalette() {
 
     // Helper: Convert Hex to the specific RGBA string format used by the map
     const hexToRgbString = (hex) => {
-        // Remove hash if present
         hex = hex.replace(/^#/, '');
-        // Parse r, g, b
-        const bigint = parseInt(hex, 16);
-        const r = (bigint >> 16) & 255;
-        const g = (bigint >> 8) & 255;
-        const b = bigint & 255;
+
+        // Expand shorthand #RGB ¨ #RRGGBB
+        if (hex.length === 3) {
+            hex = hex.split('').map(c => c + c).join('');
+        }
+
+        if (hex.length !== 6 && hex.length !== 8) return null;
+
+        const r = parseInt(hex.slice(0, 2), 16);
+        const g = parseInt(hex.slice(2, 4), 16);
+        const b = parseInt(hex.slice(4, 6), 16);
+        const a = hex.length === 8 ? parseInt(hex.slice(6, 8), 16) : 255;
+
+        if ([r, g, b, a].some(Number.isNaN)) return null;
+
+        // Invisible pixel: never matches a ghost color
+        if (a === 0) return null;
+
         return `rgba(${r},${g},${b},1)`;
     };
 
@@ -394,10 +406,9 @@ function filterGhostByUserPalette() {
 
     activeColors.forEach(colorIndex => {
         const hexColor = Colors[colorIndex];
-        if (hexColor) {
-            const rgbaString = hexToRgbString(hexColor);
-            userActiveRgbas.add(rgbaString);
-        }
+        if (!hexColor) return;
+        const rgbaString = hexToRgbString(hexColor);
+        if (rgbaString) userActiveRgbas.add(rgbaString);
     });
 
     // 5. Intersect: Iterate the Ghost's palette and enable only those that match the user's set
