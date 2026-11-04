@@ -241,16 +241,17 @@ function toggleProfile(forceOpen = false) {
             pAction.classList.remove("hidden");
             pAction.classList.add("flex");
 
-            // Check if Global Blob exists
-            if (typeof currentUserPfpBlob !== 'undefined' && currentUserPfpBlob) {
-                // Create object URL from the blob
-                pImg.src = URL.createObjectURL(currentUserPfpBlob);
-                pImg.classList.remove("hidden");
-            } else {
-                // No image data: Hide the img tag so no broken icon appears (Transparent)
-                pImg.src = "";
-                pImg.classList.add("hidden");
-            }
+            //// Check if Global Blob exists
+            //if (typeof currentUserPfpBlob !== 'undefined' && currentUserPfpBlob) {
+            //    // Create object URL from the blob
+            //    pImg.src = URL.createObjectURL(currentUserPfpBlob);
+            //    pImg.classList.remove("hidden");
+            //} else {
+            //    // No image data: Hide the img tag so no broken icon appears (Transparent)
+            //    pImg.src = "";
+            //    pImg.classList.add("hidden");
+            //}
+            setImgFromBlob(pImg, currentUserPfpBlob);
         } else {
             // Locked: Hide image, Hide interaction
             pImg.classList.add("hidden");
@@ -267,15 +268,17 @@ function toggleProfile(forceOpen = false) {
             bAction.classList.remove("hidden");
             bAction.classList.add("flex");
 
-            // Check if Global Blob exists
-            if (typeof currentUserBannerBlob !== 'undefined' && currentUserBannerBlob) {
-                bImg.src = URL.createObjectURL(currentUserBannerBlob);
-                bImg.classList.remove("hidden");
-            } else {
-                // No image data: Hide the img tag (Transparent)
-                bImg.src = "";
-                bImg.classList.add("hidden");
-            }
+            //// Check if Global Blob exists
+            //if (typeof currentUserBannerBlob !== 'undefined' && currentUserBannerBlob) {
+            //    bImg.src = URL.createObjectURL(currentUserBannerBlob);
+            //    bImg.classList.remove("hidden");
+            //} else {
+            //    // No image data: Hide the img tag (Transparent)
+            //    bImg.src = "";
+            //    bImg.classList.add("hidden");
+            //}
+            setImgFromBlob(bImg, currentUserBannerBlob);
+
         } else {
             // Locked: Hide image, Hide interaction
             bImg.classList.add("hidden");

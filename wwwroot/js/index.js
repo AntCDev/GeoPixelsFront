@@ -2563,23 +2563,26 @@ async function logIn(data) {
     localStorage.setItem('tokenUser', tokenUser);
     localStorage.setItem('userID', userID.toString());
 
-    // --- NEW LOGIC: FETCH AND STORE BLOBS ---
-    const cacheBuster = Date.now();
+    //// --- NEW LOGIC: FETCH AND STORE BLOBS ---
+    //const cacheBuster = Date.now();
 
-    // We define the URLs
-    const pfpUrl = `/GetUserProfilePic/${userID}?t=${cacheBuster}`;
-    const bannerUrl = `/GetUserBanner/${userID}?t=${cacheBuster}`;
+    //// We define the URLs
+    //const pfpUrl = `/GetUserProfilePic/${userID}?t=${cacheBuster}`;
+    //const bannerUrl = `/GetUserBanner/${userID}?t=${cacheBuster}`;
 
-    // We fetch both simultaneously to save time
-    const [pfpBlob, bannerBlob] = await Promise.all([
-        fetchImageAsBlob(pfpUrl),
-        fetchImageAsBlob(bannerUrl)
-    ]);
+    //// We fetch both simultaneously to save time
+    //const [pfpBlob, bannerBlob] = await Promise.all([
+    //    fetchImageAsBlob(pfpUrl),
+    //    fetchImageAsBlob(bannerUrl)
+    //]);
 
-    // Store the actual Blobs in the global variables
-    currentUserPfpBlob = pfpBlob;       // This is now a Blob() or null
-    currentUserBannerBlob = bannerBlob; // This is now a Blob() or null
-    // ----------------------------------------
+    //// Store the actual Blobs in the global variables
+    //currentUserPfpBlob = pfpBlob;       // This is now a Blob() or null
+    //currentUserBannerBlob = bannerBlob; // This is now a Blob() or null
+    //// ----------------------------------------
+
+    initUserImageSlots(data);
+    await loadActiveUserImages();
 
     // 3. Set up user-specific colors
     Colors = IntToHexLst(data.colors.join(", "));
@@ -4356,20 +4359,30 @@ function showPixelUser(userData, key) {
             visualsEl.classList.remove("hidden");
             const cacheBuster = Date.now();
 
+            // Use the active slot if its file exists, otherwise fall back to the first existing slot
+            const pickSlot = (active, slots) => {
+                if (!Array.isArray(slots) || slots.length === 0) return null;
+                return slots.includes(active) ? active : slots[0];
+            };
+
             // Handle Profile Picture
             if (userData.profileLevel > 0) {
-                const pfpUrl = `/GetUserProfilePic/${userData.id}?t=${cacheBuster}`;
-                pfpImg.src = pfpUrl;
-                pfpImg.onload = () => { pfpImg.classList.remove("hidden"); };
-                pfpImg.onerror = () => { pfpImg.classList.add("hidden"); };
+                const pfpIndex = pickSlot(userData.activePfp, userData.pfpSlots);
+                if (pfpIndex !== null) {
+                    pfpImg.onload = () => { pfpImg.classList.remove("hidden"); };
+                    pfpImg.onerror = () => { pfpImg.classList.add("hidden"); };
+                    pfpImg.src = `/GetUserProfilePic/${userData.id}/${pfpIndex}?t=${cacheBuster}`;
+                }
             }
 
             // Handle Banner
             if (userData.bannersLevel > 0) {
-                const bannerUrl = `/GetUserBanner/${userData.id}?t=${cacheBuster}`;
-                bannerImg.src = bannerUrl;
-                bannerImg.onload = () => { bannerImg.classList.remove("hidden"); };
-                bannerImg.onerror = () => { bannerImg.classList.add("hidden"); };
+                const bannerIndex = pickSlot(userData.activeBanner, userData.bannerSlots);
+                if (bannerIndex !== null) {
+                    bannerImg.onload = () => { bannerImg.classList.remove("hidden"); };
+                    bannerImg.onerror = () => { bannerImg.classList.add("hidden"); };
+                    bannerImg.src = `/GetUserBanner/${userData.id}/${bannerIndex}?t=${cacheBuster}`;
+                }
             }
         }
 
